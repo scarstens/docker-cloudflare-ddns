@@ -12,12 +12,21 @@ Check it out on the docker hub: https://hub.docker.com/r/sethcarstens/cloudflare
 Run this docker container as a service on your server to initiate a free Dynamic DNS solution on your own custom domains. Example docker run command:
 
 ```
-docker run --name CloudFlareDDNS -e CF_EMAIL="__YOURADDRESS__" -e CF_HOST="__YOURURL__" -e CF_API="__YOURAPIKEY__" -d sethcarstens/cloudflare-ddns
+docker run --name CloudFlareDDNS \
+-e CF_EMAIL="__YOURADDRESS__" \
+-e CF_HOST="__YOURURL__" \
+-e CF_API="__YOURAPIKEY__" \
+-d sethcarstens/cloudflare-ddns
 ```
 
 If you are developing locally, you may want to map the app folder.
 ```
-docker run --name CloudFlareDDNS -v $(pwd)/app/:/root/app -e CF_EMAIL="__YOURADDRESS__" -e CF_HOST="__YOURURL__" -e CF_API="__YOURAPIKEY__" -dit cf -dit sethcarstens/cloudflare-ddns
+docker run --name CloudFlareDDNS \
+-v $(pwd)/app/:/root/app \
+-e CF_EMAIL="__YOURADDRESS__" \
+-e CF_HOST="__YOURURL__" \
+-e CF_API="__YOURAPIKEY__" \
+-dit cf -dit sethcarstens/cloudflare-ddns
 ```
 
 Where do I find my CloudFlare API key?
