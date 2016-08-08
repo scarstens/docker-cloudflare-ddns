@@ -26,14 +26,7 @@ Where do I find my CloudFlare API key?
 ## Services
 All services are defined and managed using the phusion/baseimage methodology. Logs are output using syslog and can be accessed using ``docker logs {container}``.
 
-* Node.JS (lastest)
+* Node.JS (wheezy)
 * XTERM environment support w/colors
 * dnsutils
 * cfcli
-
-## Web Root
-The following folder is specified as the default root web folder:
-
-``/var/www/public``
-
-TODO: build log reader at web endpoint for unraid GUI
